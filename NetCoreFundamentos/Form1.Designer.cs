@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnPulsar = new Button();
             label1 = new Label();
             txtNombre = new TextBox();
             SuspendLayout();
             // 
-            // button1
+            // btnPulsar
             // 
-            button1.Location = new Point(267, 162);
-            button1.Name = "button1";
-            button1.Size = new Size(123, 45);
-            button1.TabIndex = 0;
-            button1.Text = "Pulsar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            btnPulsar.Location = new Point(267, 162);
+            btnPulsar.Name = "btnPulsar";
+            btnPulsar.Size = new Size(123, 45);
+            btnPulsar.TabIndex = 0;
+            btnPulsar.Text = "Pulsar";
+            btnPulsar.UseVisualStyleBackColor = true;
+            btnPulsar.Click += btnPulsar_Click;
             // 
             // label1
             // 
@@ -67,7 +67,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(txtNombre);
             Controls.Add(label1);
-            Controls.Add(button1);
+            Controls.Add(btnPulsar);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -76,7 +76,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnPulsar;
         private Label label1;
         private TextBox txtNombre;
     }
