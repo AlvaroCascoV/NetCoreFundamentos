@@ -1,0 +1,94 @@
+﻿namespace NetCoreFundamentos.Forms
+{
+    partial class Form06Email
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            btnValidar = new Button();
+            txtEmail = new TextBox();
+            label1 = new Label();
+            lblValidacion = new Label();
+            SuspendLayout();
+            // 
+            // btnValidar
+            // 
+            btnValidar.Location = new Point(60, 105);
+            btnValidar.Name = "btnValidar";
+            btnValidar.Size = new Size(75, 23);
+            btnValidar.TabIndex = 0;
+            btnValidar.Text = "Validar";
+            btnValidar.UseVisualStyleBackColor = true;
+            btnValidar.Click += btnValidar_Click;
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(60, 76);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(169, 23);
+            txtEmail.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(60, 58);
+            label1.Name = "label1";
+            label1.Size = new Size(36, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Email";
+            // 
+            // lblValidacion
+            // 
+            lblValidacion.AutoSize = true;
+            lblValidacion.Location = new Point(60, 142);
+            lblValidacion.Name = "lblValidacion";
+            lblValidacion.Size = new Size(60, 15);
+            lblValidacion.TabIndex = 3;
+            lblValidacion.Text = "Su correo ";
+            // 
+            // Form06Email
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(lblValidacion);
+            Controls.Add(label1);
+            Controls.Add(txtEmail);
+            Controls.Add(btnValidar);
+            Name = "Form06Email";
+            Text = "Form06Email";
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Button btnValidar;
+        private TextBox txtEmail;
+        private Label label1;
+        private Label lblValidacion;
+    }
+}

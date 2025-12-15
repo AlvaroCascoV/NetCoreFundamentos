@@ -18,7 +18,8 @@ namespace NetCoreFundamentos
             //Application.Run(new Form02ColoresPosicion());
             //Application.Run(new Form03DiaNacimiento());
             //Application.Run(new Form04DateTime());
-            Application.Run(new Form05Char());
+            //Application.Run(new Form05Char());
+            Application.Run(new Form06Email());
         }
     }
 }
