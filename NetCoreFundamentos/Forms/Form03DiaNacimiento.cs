@@ -35,7 +35,7 @@ namespace NetCoreFundamentos.Forms
             }
 
             //Multiplicar el Mes más 1 por 3 y dividirlo entre 5
-            int operacion1 = mes + 1 * 3 / 5;
+            int operacion1 = ((mes + 1) * 3) / 5;
             //Dividir el año entre 4
             int operacion2 = anyo / 4;
             //Dividir el año entre 100
@@ -44,9 +44,9 @@ namespace NetCoreFundamentos.Forms
             int operacion4 = anyo / 400;
             //Sumar el día, el doble del mes, el año, el resultado de la operación 1,
             //el resultado de la operación 2, menos el resultado de la operación 3 más la operación 4 más 2
-            int operacion5 = dia + (mes * 2) + operacion1 + operacion2 - operacion3 + operacion4 + 2;
+            int operacion5 = dia + (mes * 2) +anyo+ operacion1 + operacion2 - operacion3 + operacion4 + 2;
             //Dividir el resultado anterior entre 7.
-            int operacion6 = operacion5 % 7;
+            int operacion6 = operacion5 / 7;
             //Restar el número del paso 5 con el número del paso 6 por 7.
             int operacion7 = operacion5 - (operacion6*7);
             string diaSemana = "";
@@ -57,7 +57,7 @@ namespace NetCoreFundamentos.Forms
             else if (operacion7 == 3) {diaSemana = "Martes";}
             else if (operacion7 == 4) {diaSemana = "Miércoles";}
             else if (operacion7 == 5) {diaSemana = "Jueves";}
-            else if (operacion7 == 6) {diaSemana = "Viernes";}
+            else if (operacion7 == 6) {diaSemana = "Viernes"; } else { diaSemana = "ERROR LOGICO"; }
             lblResultado.Text = "El día de la semana es " + diaSemana;
         }
     }
