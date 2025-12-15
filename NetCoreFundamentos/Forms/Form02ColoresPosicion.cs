@@ -26,7 +26,24 @@ namespace NetCoreFundamentos.Forms
             int rojo = int.Parse(txtColorRojo.Text);
             int verde = int.Parse(txtColorVerde.Text);
             int azul = int.Parse(txtColorAzul.Text);
-            this.BackColor = Color.FromArgb(rojo, verde, azul);
+            
+            //CONDICIONALES
+            if (rojo < 0 || rojo > 255)
+            {
+                MessageBox.Show("El valor del rojo debe estar entre 0 y 255");
+            }
+            else if (verde < 0 || verde > 255)
+            {
+                MessageBox.Show("El valor del verde debe estar entre 0 y 255");
+            }
+            else if (azul < 0 || azul > 255)
+            {
+                MessageBox.Show("El valor del azul debe estar entre 0 y 255");
+            }
+            else
+            {
+                this.BackColor = Color.FromArgb(rojo, verde, azul);
+            }
         }
     }
 }
