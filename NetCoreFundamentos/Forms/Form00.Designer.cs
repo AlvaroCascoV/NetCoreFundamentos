@@ -1,6 +1,6 @@
 ﻿namespace NetCoreFundamentos
 {
-    partial class Form1
+    partial class Form00
     {
         /// <summary>
         ///  Required designer variable.
