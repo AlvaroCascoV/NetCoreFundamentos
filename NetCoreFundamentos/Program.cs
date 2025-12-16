@@ -21,7 +21,10 @@ namespace NetCoreFundamentos
             //Application.Run(new Form05Char());
             //Application.Run(new Form06Email());
             //Application.Run(new Form07SumarString());
-            Application.Run(new Form08StringBuilder());
+            //Application.Run(new Form08StringBuilder());
+            //Application.Run(new Form09Isbn());
+            //Application.Run(new Form10ColeccionGrafica());
+            Application.Run(new Form11ColeccionMultiple());
         }
     }
 }
