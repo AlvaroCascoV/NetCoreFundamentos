@@ -60,5 +60,40 @@ namespace NetCoreFundamentos.Forms
             this.GetDobleReferencia(ref num);
             this.lblResultado.Text = num.ToString();
         }
+
+        private void lblRaton_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblRaton.Text = "X: " + e.X + "Y: " + e.Y;
+        }
+
+        private void txtSoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //TENEMOS UNA ENUMERACION LLAMADA Keys QUE NOS PERMITE
+            //ACCEDER A LOS CODIGOS DEL TECLADO
+            //DEBEMOS SABER EL CODIGO ASCII DE LA TECLA DE BORRAR
+            char teclaBorrar = (char)Keys.Back;
+            //Si lo que escribo no es un digito o no es la tecla de borrar, desactivo el evento de escritura
+            if (char.IsDigit(e.KeyChar) == false
+                && e.KeyChar != teclaBorrar)
+            {
+                //INDICA SI NOS HACEMOS CARGO DEL EVENTO DE KEYPRESS
+                e.Handled = true;
+            }
+        }
+
+        private void txtSoloLetras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //TENEMOS UNA ENUMERACION LLAMADA Keys QUE NOS PERMITE
+            //ACCEDER A LOS CODIGOS DEL TECLADO
+            //DEBEMOS SABER EL CODIGO ASCII DE LA TECLA DE BORRAR
+            char teclaBorrar = (char)Keys.Back;
+            //Si lo que escribo no es un digito o no es la tecla de borrar, desactivo el evento de escritura
+            if (char.IsLetter(e.KeyChar) == false
+                && e.KeyChar != teclaBorrar)
+            {
+                //INDICA SI NOS HACEMOS CARGO DEL EVENTO DE KEYPRESS
+                e.Handled = true;
+            }
+        }
     }
 }
