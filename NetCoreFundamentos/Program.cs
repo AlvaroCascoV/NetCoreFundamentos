@@ -27,7 +27,8 @@ namespace NetCoreFundamentos
             //Application.Run(new Form11ColeccionMultiple());
             //Application.Run(new Form12ColeccionNumeros());
             //Application.Run(new Form13TiendaProductos());
-            Application.Run(new Form14Metodos());
+            //Application.Run(new Form14Metodos());
+            Application.Run(new Form15ArrayList());
         }
     }
 }
