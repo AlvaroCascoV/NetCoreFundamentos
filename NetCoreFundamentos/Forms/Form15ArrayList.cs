@@ -57,6 +57,13 @@ namespace NetCoreFundamentos.Forms
                     ((TextBox)boton).Paste();
                 }
             }
+
+            this.button1.Click += MetodoDelegado;
+        }
+
+        void MetodoDelegado(object sender, EventArgs e)
+        {
+            
         }
     }
 }
