@@ -14,6 +14,15 @@ namespace NetCoreFundamentos.Forms
         public Form15ArrayList()
         {
             InitializeComponent();
+            //CREAMOS UNA COLECCION GENERICA
+            List<Control> botones = new List<Control>();
+            //DETECTA AUTOMATICAMENTE LOS ELEMENTOS
+            botones.Add(this.button1);
+            botones.Add(this.button2);
+            botones.Add(this.button3);
+            botones.Add(this.textBox1); //error de compilacion si el tipado es button, se ve antes de ejecutar
+            botones[0].BackColor = Color.Aqua;//al ser Control, esto si tira
+
             //VAMOS A CREAR UNA COLECCION NO TIPADA
             ArrayList coleccion = new ArrayList();
             coleccion.Add(this.button1);
