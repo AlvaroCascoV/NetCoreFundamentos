@@ -37,20 +37,26 @@ namespace NetCoreFundamentos.Forms
             int longitud = this.lstTienda.SelectedIndices.Count;
             for (int i = longitud - 1; i >= 0; i--)
             {
-                var item = this.lstTienda.SelectedItems[i];
+                int index = this.lstTienda.SelectedIndices[i];
+                string item = this.lstTienda.SelectedItems[i].ToString();
                 this.lstAlmacen.Items.Add(item);
-                this.lstTienda.Items.Remove(item);
+                this.lstTienda.Items.RemoveAt(index);
             }
         }
 
         private void btnTodos_Click(object sender, EventArgs e)
         {
-            for (int i = this.lstTienda.Items.Count - 1; i >= 0; i--)
-            {
-                var item = this.lstTienda.Items[i];
-                this.lstAlmacen.Items.Add(item);
-                this.lstTienda.Items.Remove(item);
-            }
+            //EXISTE UN METODO PARA AÑADIR MULTIPLES ELEMENTOS A UNA COLECCION
+            //AddRange
+            this.lstAlmacen.Items.AddRange(this.lstTienda.Items);
+            this.lstTienda.Items.Clear();
+
+            //for (int i = this.lstTienda.Items.Count - 1; i >= 0; i--)
+            //{
+            //    var item = this.lstTienda.Items[i];
+            //    this.lstAlmacen.Items.Add(item);
+            //    this.lstTienda.Items.Remove(item);
+            //}
         }
 
         private void btnSubir_Click(object sender, EventArgs e)
@@ -58,9 +64,9 @@ namespace NetCoreFundamentos.Forms
             if (this.lstAlmacen.SelectedIndex > 0)
             {
                 int indice = this.lstAlmacen.SelectedIndex;
-                object item = this.lstAlmacen.SelectedItem;
+                string item = this.lstAlmacen.SelectedItem.ToString();
+                this.lstAlmacen.Items.RemoveAt(indice);
                 this.lstAlmacen.Items.Insert(indice - 1, item);
-                this.lstAlmacen.Items.RemoveAt(indice + 1);
                 this.lstAlmacen.SelectedIndex = indice - 1;
             }
         }
@@ -71,8 +77,8 @@ namespace NetCoreFundamentos.Forms
             {
                 int indice = this.lstAlmacen.SelectedIndex;
                 object item = this.lstAlmacen.SelectedItem;
-                this.lstAlmacen.Items.Insert(indice + 2, item);
                 this.lstAlmacen.Items.RemoveAt(indice);
+                this.lstAlmacen.Items.Insert(indice + 1, item);
                 this.lstAlmacen.SelectedIndex = indice + 1;
             }
         }
