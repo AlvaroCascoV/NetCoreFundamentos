@@ -27,7 +27,7 @@ namespace NetCoreFundamentos.Forms
             CheckBox chkPulsado = (CheckBox)sender;
             int numero = int.Parse(chkPulsado.Text);
             int suma = int.Parse(this.txtSuma.Text);
-            
+
             if (chkPulsado.Checked)
             {
                 suma += numero;
@@ -47,6 +47,11 @@ namespace NetCoreFundamentos.Forms
                 int aleat = random.Next(1, 50);
                 chk.Text = aleat.ToString();
             }
+        }
+
+        private void Form18SumarCheckbox_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

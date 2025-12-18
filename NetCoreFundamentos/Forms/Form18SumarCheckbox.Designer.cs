@@ -297,6 +297,7 @@
             Controls.Add(label1);
             Name = "Form18SumarCheckbox";
             Text = "Form18SumarCheckbox";
+            Load += Form18SumarCheckbox_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
