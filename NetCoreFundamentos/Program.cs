@@ -32,7 +32,8 @@ namespace NetCoreFundamentos
             //Application.Run(new Form16ListDelegados());
             //Application.Run(new Form17SumarBotones());
             //Application.Run(new Form18SumarCheckbox());
-            Application.Run(new Form19TablaMultiplicar());
+            //Application.Run(new Form19TablaMultiplicar());
+            Application.Run(new Form20TestClases());
         }
     }
 }
