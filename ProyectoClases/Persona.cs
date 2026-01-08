@@ -15,7 +15,24 @@ namespace ProyectoClases
     #endregion
     public class Persona
     {
+        #region CONSTRUCTORES
+        //podemos crear el domicilio en el constructor para evitar que sea null
+        //y que todas las personas tengan una dirección por defecto
+        //public Persona() 
+        //{ 
+        //    this.Domicilio = new Direccion();
+        //}
+
+        //tambien podemos obligar a pasar los datos necesarios para crear una persona
+        //public Persona(string nombre, string apellidos) 
+        //{
+        
+        //}
+
+        #endregion
+
         #region PROPIEDADES
+
         //si son enum, tienen que ser propiedades extendidas
         public TipoGenero _Genero;
         public Paises _Nacionalidad;
@@ -82,6 +99,24 @@ namespace ProyectoClases
         //PORPIEDADES AUTOIMPLMENTADAS
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
+
+        //propiedades de dirección
+        public Direccion Domicilio { get; set; }
+        public Direccion DomicilioVacaciones { get; set; }
+
+        //PROPIEDADES INDEXADAS
+        private string _DescripcionThis;
+        public string this[int indice]
+        {
+            get { return this._DescripcionThis; }
+            set { 
+                //DEVOLVEMOS UNA DESCRIPCION ALEATORIA DE NUESTRO NUMERO
+                Random random = new Random();
+                int dato = random.Next(1, 20);
+                this._DescripcionThis = "Descripción " + dato;
+            }
+        }
+
         #endregion
 
         #region METODOS

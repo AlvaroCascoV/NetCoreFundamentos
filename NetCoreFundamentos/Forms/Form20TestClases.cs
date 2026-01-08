@@ -33,6 +33,24 @@ namespace NetCoreFundamentos.Forms
                 ", Nacionalidad: " + person.Nacionalidad);
             //dependiendo que le pase a GetNombreCompleto se comporta diferente
             this.lstClases.Items.Add("Nombre Completo: " + person.GetNombreCompleto(true));
+
+            //si no creamos un objeto, Domicilio es null y da una excepción
+            //podemos crear el objeto aqui o en la clase Persona en el constructor
+            //si lo creamos aqui, podemos acceder a sus propiedades directamente en la creación
+            person.Domicilio = new Direccion("Avenida Enero","Lugo");
+
+            person.Domicilio.Calle = "Avenida Enero";
+            person.Domicilio.Ciudad = "Madrid";
+            person.Domicilio.CodigoPostal = 28003;
+            this.lstClases.Items.Add("Dirección: " 
+                + person.Domicilio.Calle + ", "
+                + person.Domicilio.Ciudad + ", "
+                + person.Domicilio.CodigoPostal);
+
+            //PROPIEDADES INDEXADAS
+            person[0] = "Vamos 1";
+            person[1] = "Vamos 2";
+            this.lstClases.Items.Add("Propiedad indexada 0: " + person[0]);
         }
     }
 }
