@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace ProyectoClases
@@ -26,8 +27,24 @@ namespace ProyectoClases
         //tambien podemos obligar a pasar los datos necesarios para crear una persona
         //public Persona(string nombre, string apellidos) 
         //{
-        
+
         //}
+
+        //constructor vacío para comportamiento de herencia con empleados
+        //sin constructor en empleado, se llama al constructor vacío de Persona
+        //aun con un constructor vacio en empleado, no se sustituye el de persona
+        public Persona()
+        {
+            Debug.WriteLine("Constructor PERSONA vacío");
+        }
+        //si ponemos un constructor con parámetros, lee el constructor con parámetros de empleado
+        //pero antes el vacío de persona (el default) si no llamamos al que queremos explicitamente
+        public Persona(string nombre, string apellidos)
+        {
+            this.Nombre = nombre;
+            this.Apellidos = apellidos;
+            Debug.WriteLine("Constructor PERSONA con dos parámetros");
+        }
 
         #endregion
 
