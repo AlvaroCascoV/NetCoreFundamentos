@@ -21,10 +21,18 @@ namespace NetCoreFundamentos.Forms
             Persona person = new Persona();
             person.Nombre = "Alumno";
             person.Apellidos = "Reyes";
-            person.Edad = -25;
+            person.Edad = 25;
             this.lstClases.Items.Add("Nombre: " + person.Nombre +
                 ", Apellidos: " + person.Apellidos + 
                 ", Edad: " + person.Edad);
+
+            person.Genero = TipoGenero.Femenino;
+            person.Nacionalidad = Paises.Andorra;
+
+            this.lstClases.Items.Add("Genero: " + person.Genero +
+                ", Nacionalidad: " + person.Nacionalidad);
+            //dependiendo que le pase a GetNombreCompleto se comporta diferente
+            this.lstClases.Items.Add("Nombre Completo: " + person.GetNombreCompleto(true));
         }
     }
 }
