@@ -35,7 +35,9 @@ namespace NetCoreFundamentos
             //Application.Run(new Form19TablaMultiplicar());
             //Application.Run(new Form20TestClases());
             //Application.Run(new Form21Files());
-            Application.Run(new Form22MascotasFiles());
+            //Application.Run(new Form22MascotasFiles());
+            Application.Run(new Form23ObjetoMascotaXML());
+            //Application.Run(new Form24ColeccionMascotasXML());
         }
     }
 }
