@@ -87,6 +87,13 @@ namespace NetCoreFundamentos.Forms
             //usando nuestro helper
             string content = await this.helper.ReadFileAsync(this.Path);
             this.txtContenido.Text = content;
+            //separamos el texto y lo ponemos en la lista
+            string[] nombres = content.Split(',');
+            this.lstNombres.Items.Clear();
+            foreach (string name in nombres)
+            {
+                this.lstNombres.Items.Add(name);
+            }
         }
     }
 }
